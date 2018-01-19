@@ -7,7 +7,6 @@
         "php": ">=7.0",
         "anhskohbo/no-captcha": "^3.0",
         "illuminate/support": "5.*",
-        "shawnsandy/backstory": "dev-master",
         "spatie/laravel-analytics": "^3.4"
     },
     "repositories": [
@@ -42,13 +41,11 @@
             "providers": [
                 "Reveal\\Framework\\FrameworkServiceProvider",
                 "Spatie\\Analytics\\AnalyticsServiceProvider",
-                "ShawnSandy\\Backstory\\BackstoryServiceProvider",
                 "Anhskohbo\\NoCaptcha\\NoCaptchaServiceProvider"
             ],
             "aliases": {
                 "Analytics": "Spatie\\Analytics\\AnalyticsFacade",
-                "NoCaptcha": "Anhskohbo\\NoCaptcha\\Facades\\NoCaptcha",
-                "Backstory": "ShawnSandy\\Backstory\\BackstoryFacade"
+                "NoCaptcha": "Anhskohbo\\NoCaptcha\\Facades\\NoCaptcha"
             }
         }
     },
