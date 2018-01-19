@@ -1,0 +1,31 @@
+{
+    "name": "reveal/framework",
+    "description": "Laravel Components",
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": "5.*",
+        "spatie/laravel-analytics": "dev-master"
+    },
+    "author": {
+        "name": "shawn sandy ",
+        "email": "shawnsandy04@gmail.com"
+    },
+    "autoload": {
+        "psr-4": {
+            "Reveal\\Framework\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Reveal\\Framework\\FrameworkServiceProvider"
+            ],
+            "aliases": [
+                "Analytics": "Spatie\\Analytics\\AnalyticsFacade"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
