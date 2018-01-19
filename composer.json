@@ -1,13 +1,34 @@
 {
-    "name": "reveal/framework",
+    "name": "reveal-framework",
     "description": "Laravel Components",
     "license": "MIT",
     "type": "library",
     "require": {
         "php": ">=7.0",
+        "anhskohbo/no-captcha": "^3.0",
         "illuminate/support": "5.*",
-        "spatie/laravel-analytics": "dev-master"
+        "jrean/laravel-user-verification": "dev-master",
+        "shawnsandy/backstory": "dev-master",
+        "spatie/laravel-analytics": "^3.4"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/shawnsandy/backstory"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/shawnsandy/img-fly"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/shawnsandy/jarvis"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/shawnsandy/dash-auth"
+        }
+    ],
     "author": {
         "name": "shawn sandy ",
         "email": "shawnsandy04@gmail.com"
@@ -21,12 +42,20 @@
         "laravel": {
             "providers": [
                 "Reveal\\Framework\\FrameworkServiceProvider",
-                "Spatie\\Analytics\\AnalyticsServiceProvider"
+                "Spatie\\Analytics\\AnalyticsServiceProvider",
+                "ShawnSandy\\Backstory\\BackstoryServiceProvider",
+                "Anhskohbo\\NoCaptcha\\NoCaptchaServiceProvider"
             ],
             "aliases": {
-                "Analytics": "Spatie\\Analytics\\AnalyticsFacade"
+                "Analytics": "Spatie\\Analytics\\AnalyticsFacade",
+                "NoCaptcha": "Anhskohbo\\NoCaptcha\\Facades\\NoCaptcha",
+                "Backstory": "ShawnSandy\\Backstory\\BackstoryFacade"
             }
         }
     },
-    "minimum-stability": "dev"
+    "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
 }
