@@ -7,7 +7,6 @@
         "php": ">=7.0",
         "anhskohbo/no-captcha": "^3.0",
         "illuminate/support": "5.*",
-        "jrean/laravel-user-verification": "dev-master",
         "shawnsandy/backstory": "dev-master",
         "spatie/laravel-analytics": "^3.4"
     },
