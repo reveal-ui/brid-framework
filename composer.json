@@ -20,11 +20,12 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Reveal\\Framework\\FrameworkServiceProvider"
+                "Reveal\\Framework\\FrameworkServiceProvider",
+                "Spatie\\Analytics\\AnalyticsServiceProvider"
             ],
-            "aliases": [
+            "aliases": {
                 "Analytics": "Spatie\\Analytics\\AnalyticsFacade"
-            ]
+            }
         }
     },
     "minimum-stability": "dev"
