@@ -1,5 +1,5 @@
 {
-    "name": "reveal-framework",
+    "name": "reveal-ui/framework",
     "description": "Laravel Components",
     "license": "MIT",
     "type": "library",
