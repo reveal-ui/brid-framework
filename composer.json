@@ -9,7 +9,7 @@
     "illuminate/support": "5.*",
     "pragmarx/firewall": "^2.1",
     "rap2hpoutre/laravel-log-viewer": "^0.11.0",
-    "shawnsandy/backstory": "0.1.4",
+    "shawnsandy/backstory": "^0.1.4",
     "spatie/laravel-analytics": "^3.4"
   },
   "author": {
@@ -22,12 +22,6 @@
     },
     "files": ["src/helpers.php"]
   },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/shawnsandy/backstory"
-    }
-  ],
   "extra": {
     "laravel": {
       "providers": [
