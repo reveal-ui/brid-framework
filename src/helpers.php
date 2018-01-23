@@ -12,7 +12,9 @@ if(!function_exists("countStories"))
 
 }
 
-if(function_exists('logs'))
+if(function_exists('errorLogs'))
 {
-	return app(LaravelLogViewer::class);
+	function errorLogs() {
+		return app(LaravelLogViewer::class);
+	}
 }
