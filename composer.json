@@ -30,7 +30,7 @@
         "Anhskohbo\\NoCaptcha\\NoCaptchaServiceProvider",
         "Rap2hpoutre\\LaravelLogViewer\\LaravelLogViewerServiceProvider",
         "PragmaRX\\Firewall\\Vendor\\Laravel\\ServiceProvider",
-        "ShawnSandy\\Backstory\\BackstoryServiceProvider"
+        "ShawnSandy\\Backstory\\BackstoryServicesProvider"
       ],
       "aliases": {
         "Analytics": "Spatie\\Analytics\\AnalyticsFacade",
