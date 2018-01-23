@@ -9,6 +9,7 @@
     "illuminate/support": "5.*",
     "pragmarx/firewall": "^2.1",
     "rap2hpoutre/laravel-log-viewer": "^0.11.0",
+    "shawnsandy/backstory": "0.1.4",
     "spatie/laravel-analytics": "^3.4"
   },
   "author": {
@@ -19,10 +20,14 @@
     "psr-4": {
       "Reveal\\Framework\\": "src/"
     },
-    "files": [
-        "src/helpers.php"
-    ]
+    "files": ["src/helpers.php"]
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/shawnsandy/backstory"
+    }
+  ],
   "extra": {
     "laravel": {
       "providers": [
@@ -30,12 +35,14 @@
         "Spatie\\Analytics\\AnalyticsServiceProvider",
         "Anhskohbo\\NoCaptcha\\NoCaptchaServiceProvider",
         "Rap2hpoutre\\LaravelLogViewer\\LaravelLogViewerServiceProvider",
-        "PragmaRX\\Firewall\\Vendor\\Laravel\\ServiceProvider"
+        "PragmaRX\\Firewall\\Vendor\\Laravel\\ServiceProvider",
+        "ShawnSandy\\Backstory\\BackstoryServiceProvider"
       ],
       "aliases": {
         "Analytics": "Spatie\\Analytics\\AnalyticsFacade",
         "NoCaptcha": "Anhskohbo\\NoCaptcha\\Facades\\NoCaptcha",
-        "Firewall": "PragmaRX\\Firewall\\Vendor\\Laravel\\Facade"
+        "Firewall": "PragmaRX\\Firewall\\Vendor\\Laravel\\Facade",
+        "Backstory": "ShawnSandy\\Backstory\\BackstoryFacade"
       }
     }
   },
