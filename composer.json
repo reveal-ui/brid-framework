@@ -11,6 +11,8 @@
     "pragmarx/firewall": "^2.1",
     "rap2hpoutre/laravel-log-viewer": "^0.11.0",
     "shawnsandy/backstory": "^0.1.4",
+    "shawnsandy/dash-auth": "0.2.2",
+    "shawnsandy/img-fly": "^0.1.11",
     "spatie/laravel-analytics": "^3.4"
   },
   "author": {
@@ -23,6 +25,9 @@
     },
     "files": ["src/helpers.php"]
   },
+  "scripts": {
+    "phpstan": "vendor/bin/phpstan analyse src"
+  },
   "extra": {
     "laravel": {
       "providers": [
@@ -32,14 +37,18 @@
         "Rap2hpoutre\\LaravelLogViewer\\LaravelLogViewerServiceProvider",
         "PragmaRX\\Firewall\\Vendor\\Laravel\\ServiceProvider",
         "ShawnSandy\\Backstory\\BackstoryServicesProvider",
-        "Brotzka\\DotenvEditor\\DotenvEditorServiceProvider"
+        "Brotzka\\DotenvEditor\\DotenvEditorServiceProvider",
+        "ShawnSandy\\ImgFly\\ImgflyServiceProvider",
+        "ShawnSandy\\DashAuth\\DashAuthServicesProvider"
       ],
       "aliases": {
         "Analytics": "Spatie\\Analytics\\AnalyticsFacade",
         "NoCaptcha": "Anhskohbo\\NoCaptcha\\Facades\\NoCaptcha",
         "Firewall": "PragmaRX\\Firewall\\Vendor\\Laravel\\Facade",
         "Backstory": "ShawnSandy\\Backstory\\BackstoryFacade",
-        "DotenvEditor": "Brotzka\\DotenvEditor\\DotenvEditorFacade"
+        "DotenvEditor": "Brotzka\\DotenvEditor\\DotenvEditorFacade",
+        "Imgfly": "ShawnSandy\\ImgFly\\Classes\\ImgflyFacade",
+        "Dashauth": "ShawnSandy\\DashAuth\\DashAuthFacade"
       }
     }
   },
@@ -47,5 +56,8 @@
     "preferred-install": "dist",
     "sort-packages": true,
     "optimize-autoloader": true
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^0.9.1"
   }
 }
