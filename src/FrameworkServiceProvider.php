@@ -18,7 +18,7 @@ class FrameworkServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/Config/framework.php' => config_path('framework.php'),
-        ], 'framework_config');
+        ], 'framework-config');
 
         $this->loadRoutesFrom(__DIR__ . '/Routes/web.php');
 
@@ -34,11 +34,11 @@ class FrameworkServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__ . '/Views' => resource_path('views/vendor/framework'),
-        ]);
+        ], 'framework-views');
 
         $this->publishes([
             __DIR__ . '/Assets' => public_path('vendor/framework'),
-        ], 'framework_assets');
+        ], 'framework-assets');
 
         if ($this->app->runningInConsole()) {
             $this->commands([
