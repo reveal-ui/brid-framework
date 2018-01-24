@@ -6,6 +6,7 @@
   "require": {
     "php": ">=7.0",
     "anhskohbo/no-captcha": "^3.0",
+    "brotzka/laravel-dotenv-editor": "^2.0",
     "illuminate/support": "5.*",
     "pragmarx/firewall": "^2.1",
     "rap2hpoutre/laravel-log-viewer": "^0.11.0",
@@ -30,13 +31,15 @@
         "Anhskohbo\\NoCaptcha\\NoCaptchaServiceProvider",
         "Rap2hpoutre\\LaravelLogViewer\\LaravelLogViewerServiceProvider",
         "PragmaRX\\Firewall\\Vendor\\Laravel\\ServiceProvider",
-        "ShawnSandy\\Backstory\\BackstoryServicesProvider"
+        "ShawnSandy\\Backstory\\BackstoryServicesProvider",
+        "Brotzka\\DotenvEditor\\DotenvEditorServiceProvider"
       ],
       "aliases": {
         "Analytics": "Spatie\\Analytics\\AnalyticsFacade",
         "NoCaptcha": "Anhskohbo\\NoCaptcha\\Facades\\NoCaptcha",
         "Firewall": "PragmaRX\\Firewall\\Vendor\\Laravel\\Facade",
-        "Backstory": "ShawnSandy\\Backstory\\BackstoryFacade"
+        "Backstory": "ShawnSandy\\Backstory\\BackstoryFacade",
+        "DotenvEditor": "Brotzka\\DotenvEditor\\DotenvEditorFacade"
       }
     }
   },
