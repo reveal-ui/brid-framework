@@ -36,8 +36,8 @@
         "Anhskohbo\\NoCaptcha\\NoCaptchaServiceProvider",
         "Rap2hpoutre\\LaravelLogViewer\\LaravelLogViewerServiceProvider",
         "PragmaRX\\Firewall\\Vendor\\Laravel\\ServiceProvider",
-        "ShawnSandy\\Backstory\\BackstoryServicesProvider",
         "Brotzka\\DotenvEditor\\DotenvEditorServiceProvider",
+        "ShawnSandy\\Backstory\\BackstoryServicesProvider",
         "ShawnSandy\\ImgFly\\ImgflyServiceProvider",
         "ShawnSandy\\DashAuth\\DashAuthServicesProvider"
       ],
