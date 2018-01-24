@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f38d6c181f75fd6276af66aa4fe5c70f",
+    "content-hash": "8256d78706d37b025386480c51b57e3b",
     "packages": [
         {
             "name": "anhskohbo/no-captcha",
@@ -1499,6 +1499,52 @@
             "time": "2017-06-19T13:31:41+00:00"
         },
         {
+            "name": "michelf/php-markdown",
+            "version": "1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/michelf/php-markdown.git",
+                "reference": "01ab082b355bf188d907b9929cd99b2923053495"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/michelf/php-markdown/zipball/01ab082b355bf188d907b9929cd99b2923053495",
+                "reference": "01ab082b355bf188d907b9929cd99b2923053495",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Michelf\\": "Michelf/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Michel Fortin",
+                    "email": "michel.fortin@michelf.ca",
+                    "homepage": "https://michelf.ca/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "John Gruber",
+                    "homepage": "https://daringfireball.net/"
+                }
+            ],
+            "description": "PHP Markdown",
+            "homepage": "https://michelf.ca/projects/php-markdown/",
+            "keywords": [
+                "markdown"
+            ],
+            "time": "2018-01-15T00:49:33+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.23.0",
             "source": {
@@ -2509,6 +2555,71 @@
             ],
             "description": "Dynamically resize images on the Fly",
             "time": "2018-01-24T15:31:47+00:00"
+        },
+        {
+            "name": "shawnsandy/jarvis",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/shawnsandy/jarvis.git",
+                "reference": "2731aed5075954d0139f3508fa68b6daa11ce1b2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/shawnsandy/jarvis/zipball/2731aed5075954d0139f3508fa68b6daa11ce1b2",
+                "reference": "2731aed5075954d0139f3508fa68b6daa11ce1b2",
+                "shasum": ""
+            },
+            "require": {
+                "erusev/parsedown": "^1.6",
+                "illuminate/contracts": "~5.4|~5.5",
+                "illuminate/http": "~5.4|~5.5",
+                "illuminate/support": "~5.4|~5.5",
+                "michelf/php-markdown": "^1.7",
+                "php": "~5.6|~7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0||~5.0||~6.0",
+                "squizlabs/php_codesniffer": "^3.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "ShawnSandy\\Jarvis\\JarvisThemesProvider"
+                    ],
+                    "aliases": {
+                        "Jarvis": "ShawnSandy\\Jarvis\\JarvisFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ShawnSandy\\Jarvis\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Shawn Sandy",
+                    "email": "shawnsandy04@gmail.com",
+                    "homepage": "https://github.com/shawnsandy",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple and smart theme management package for Laravel",
+            "homepage": "https://github.com/shawnsandy/jarvis",
+            "keywords": [
+                "jarvis",
+                "shawnsandy"
+            ],
+            "time": "2018-01-24T17:26:09+00:00"
         },
         {
             "name": "spatie/laravel-analytics",
