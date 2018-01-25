@@ -8,6 +8,8 @@
     "anhskohbo/no-captcha": "^3.0",
     "brotzka/laravel-dotenv-editor": "^2.0",
     "illuminate/support": "5.*",
+    "laravelcollective/html": "^5.5",
+    "mews/purifier": "^2.0",
     "pragmarx/firewall": "^2.1",
     "rap2hpoutre/laravel-log-viewer": "^0.11.0",
     "shawnsandy/backstory": "^0.1.4",
@@ -41,7 +43,9 @@
         "ShawnSandy\\Backstory\\BackstoryServicesProvider",
         "ShawnSandy\\ImgFly\\ImgflyServiceProvider",
         "ShawnSandy\\DashAuth\\DashAuthServicesProvider",
-        "ShawnSandy\\Jarvis\\JarvisThemesProvider"
+        "ShawnSandy\\Jarvis\\JarvisThemesProvider",
+        "Collective\\Html\\HtmlServiceProvider",
+        "Mews\\Purifier\\PurifierServiceProvider"
       ],
       "aliases": {
         "Analytics": "Spatie\\Analytics\\AnalyticsFacade",
@@ -52,7 +56,10 @@
         "Imgfly": "ShawnSandy\\ImgFly\\Classes\\ImgflyFacade",
         "Dashauth": "ShawnSandy\\DashAuth\\DashAuthFacade",
         "Jarvis": "ShawnSandy\\Jarvis\\JarvisFacade",
-        "Framework": "Reveal\\Framework\\FrameworkFacade"
+        "Framework": "Reveal\\Framework\\FrameworkFacade",
+        "Form": "Collective\\Html\\FormFacade",
+        "Html": "Collective\\Html\\HtmlFacade",
+        "Purifier": "Mews\\Purifier\\Facades\\Purifier"
       }
     }
   },
