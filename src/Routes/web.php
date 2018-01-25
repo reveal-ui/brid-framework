@@ -20,4 +20,6 @@ Route::group(['prefix' => 'admin'], function ()
 
     Route::resource('/users', '\Reveal\Framework\Controllers\Admin\UserController');
 
+    Route::resource('/options', '\Reveal\Framework\Controllers\Admin\OptionsController');
+
 });
