@@ -1,7 +1,7 @@
 @extends('framework::layouts.dashboard')
 @section('dashboard_name', "Env Options")
 @section('content')
-
+<div class="section"></div>
 <section class="">
 
 	<div class="columns">
@@ -12,18 +12,35 @@
 				<div class="card-content">
 					<div class="header">
 						<div class="subtitle is-5 is-uppercase">
-							 <i class="im im-control-panel"></i>{{ count($options )}} Env Options
+							 <i class="im im-control-panel"></i> System Logs
 						</div>
 					</div>
-					<hr>
+
 					<div class="collections-elm">
-						@foreach ($options as $item => $value)
+						<div class="collection-elm">
+							<div class="columns is-uppercase is-size-6">
+								<div class="column is-1">
+									Level
+								</div>
+								<div class="column">
+									Message
+								</div>
+								<div class="column is-1">
+									View
+								</div>
+							</div>
+						</div>
+						@foreach ($logs as $item => $log)
 							<div class="collection-elm">
 								<div class="columns">
-									<div class="column is-3">{{ $item }}</div>
-									<div class="column">{{ $value }}</div>
+									<div class="column is-1 is-capitalized">{{ $log['level'] }}</div>
+									<div class="column is-size-7">
+												{{ str_limit($log['text'], 200) }}
+									</div>
+									<div class="column is-1">
+										View
+									</div>
 								</div>
-
 							</div>
 						@endforeach
 					</div>
