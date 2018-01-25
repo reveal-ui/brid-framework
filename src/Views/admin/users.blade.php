@@ -1,4 +1,4 @@
-@extends(Jarvis::views('layouts.dashboard'))
+@extends('framework::layouts.dashboard')
 @section("dashboard_name", "User Admin")
 @section('content')
 

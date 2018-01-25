@@ -22,4 +22,6 @@ Route::group(['prefix' => 'admin'], function ()
 
     Route::resource('/options', '\Reveal\Framework\Controllers\Admin\OptionsController');
 
+    Route::resource('/logs', '\Reveal\Framework\Controllers\Admin\LogsController');
+
 });

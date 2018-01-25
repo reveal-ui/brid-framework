@@ -1,4 +1,4 @@
-@extends(Jarvis::views('layouts.dashboard'))
+@extends('framework::layouts.dashboard')
 @section('content')
 <div class="section"></div>
     <div class="widgets">

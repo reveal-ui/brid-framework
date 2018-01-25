@@ -1,4 +1,6 @@
-@extends(Jarvis::views('layouts.dashboard')) @section("dashboard_name", "User Admin - Edit") @section('content')
+@extends('framework::layouts.dashboard')
+@section("dashboard_name", "User Admin - Edit")
+@section('content')
 <div class="section">
 	@include(jarvis_views("partials.messages"))
 </div>
