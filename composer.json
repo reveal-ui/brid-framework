@@ -51,7 +51,8 @@
         "DotenvEditor": "Brotzka\\DotenvEditor\\DotenvEditorFacade",
         "Imgfly": "ShawnSandy\\ImgFly\\Classes\\ImgflyFacade",
         "Dashauth": "ShawnSandy\\DashAuth\\DashAuthFacade",
-        "Jarvis": "ShawnSandy\\Jarvis\\JarvisFacade"
+        "Jarvis": "ShawnSandy\\Jarvis\\JarvisFacade",
+        "Framework": "Reveal\\Framework\\FrameworkFacade"
       }
     }
   },

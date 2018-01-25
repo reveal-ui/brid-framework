@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace Reveal\Framework\Controllers\Admin;
 
 use ShawnSandy\Backstory\App\Controllers\StoryController;
 use ShawnSandy\Backstory\App\Story;

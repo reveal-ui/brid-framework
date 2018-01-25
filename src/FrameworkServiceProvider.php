@@ -4,6 +4,7 @@ namespace Reveal\Framework;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Routing\Router;
+use Reveal\Framework\Classes\FrameworkClass;
 
 class FrameworkServiceProvider extends ServiceProvider
 {
@@ -20,7 +21,7 @@ class FrameworkServiceProvider extends ServiceProvider
             __DIR__.'/Config/framework.php' => config_path('framework.php'),
         ], 'framework-config');
 
-        $this->loadRoutesFrom(__DIR__ . '/Routes/web.php');
+        //$this->loadRoutesFrom(__DIR__ . '/Routes/web.php');
 
         $this->loadMigrationsFrom(__DIR__ . '/Migrations');
 
@@ -54,8 +55,16 @@ class FrameworkServiceProvider extends ServiceProvider
      */
     public function register()
     {
+
         $this->mergeConfigFrom(
             __DIR__ . '/Config/framework.php', 'framework'
         );
+
+        $this->app->bind('Framework', function()
+        {
+            return new FrameworkClass();
+        });
+
     }
+
 }
