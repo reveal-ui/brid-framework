@@ -10,3 +10,14 @@ Route::namespace('Reveal\Framework\Controllers')->as('framework::')->middleware(
         // By default this middleware is empty.
     });
 });
+
+Route::group(['prefix' => 'admin'], function ()
+{
+
+    Route::view('/', "framework::admin.dashboard");
+
+    Route::resource('/content', '\Reveal\Framework\Controllers\Admin\ContentController');
+
+    Route::resource('/users', '\Reveal\Framework\Controllers\Admin\UserController');
+
+});
