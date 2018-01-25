@@ -5,6 +5,8 @@ namespace Reveal\Framework;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Routing\Router;
 use Reveal\Framework\Classes\FrameworkClass;
+use Reveal\Framework\Classes\SystemLogs;
+use Rap2hpoutre\LaravelLogViewer\LaravelLogViewer;
 
 class FrameworkServiceProvider extends ServiceProvider
 {
@@ -63,6 +65,13 @@ class FrameworkServiceProvider extends ServiceProvider
         $this->app->bind('Framework', function()
         {
             return new FrameworkClass();
+        });
+
+        $this->app->bind('SystemLogs', function()
+        {
+
+            return new SystemLogs();
+
         });
 
     }
