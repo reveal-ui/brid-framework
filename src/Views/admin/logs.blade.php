@@ -25,6 +25,9 @@
 								<div class="column">
 									Message
 								</div>
+								<div class="column is-2">
+									Date
+								</div>
 								<div class="column is-1">
 									View
 								</div>
@@ -37,8 +40,11 @@
 									<div class="column is-size-7">
 												{{ str_limit($log['text'], 200) }}
 									</div>
+									<div class="column is-size-7 is-2">
+										{{ $log['date'] }}
+									</div>
 									<div class="column is-1">
-										View
+									<a href="" class="button is-small">View</a>
 									</div>
 								</div>
 							</div>
