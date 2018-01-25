@@ -17,7 +17,7 @@ class UserController extends Controller
     {
         $users = User::paginate(15);
 
-        return view('admin.users', compact('users'));
+        return view('framework::admin.users', compact('users'));
     }
 
     /**

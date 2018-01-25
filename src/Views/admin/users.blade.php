@@ -1,9 +1,8 @@
 @extends(Jarvis::views('layouts.dashboard'))
 @section("dashboard_name", "User Admin")
 @section('content')
-<div class="section">
-	@include(jarvis_views("partials.messages"))
-</div>
+
+@include(jarvis_views("partials.messages"))
 
 <section class="">
 
@@ -18,13 +17,11 @@
 							<i class="im im-radio-button-circle"></i> Users
 						</div>
 					</div>
-
-					@include("partials.users.users-collection")
-
-
+					@include("framework::partials.users.users-collection")
 				</div>
 			</div>
 
+			<div class="section"></div>
 			<div class="cards">
 				<div class="card-content">
 					<div class="header">
@@ -40,7 +37,7 @@
 				</div>
 			</div>
 
-			<div class="section"></div>
+
 
 		</div>
 
@@ -56,7 +53,7 @@
 					</div>
 					<hr>
 					<div class="form-element">
-						@include("forms.add-users")
+						@include("framework::forms.add-users")
 					</div>
 
 
