@@ -23,21 +23,6 @@ Framework is a Laravel toolbox packed with tools and utilities that allows you t
 - Jarvis - Jarvis is a simple and smart way to create and manage Laravel views (themes). [Info](https://github.com/shawnsandy/jarvis)
 - Laravel analytics - Using this package you can easily retrieve data from Google Analytics. [Info](https://github.com/spatie/laravel-analytics)
 
-``` json
-
-	"anhskohbo/no-captcha": "^3.0",
-	"brotzka/laravel-dotenv-editor": "^2.0",
-	"laravelcollective/html": "^5.5",
-	"mews/purifier": "^2.0",
-	"pragmarx/firewall": "^2.1",
-	"rap2hpoutre/laravel-log-viewer": "^0.11.0",
-	"shawnsandy/backstory": "^0.1.4",
-	"shawnsandy/dash-auth": "0.2.2",
-	"shawnsandy/img-fly": "^0.1.21",
-	"shawnsandy/jarvis": "^0.1.0",
-	"spatie/laravel-analytics": "^3.4"
-
-```
 
 ## Install
 
@@ -70,7 +55,66 @@ Please add the following to `routes\web.php`
 ``` php
 Framework::routes();
 ```
+__Route Info__
+
+``` php
+
+<?php
+
+
+Route::get('/', function () {
+    return view(jarvis_views('index'), ['theme_class' => 'front-page']);
+});
+
+Route::group(['prefix' => 'admin'], function ()
+{
+
+    Route::view('/', "framework::admin.dashboard");
+
+    Route::resource('/content', '\Reveal\Framework\Controllers\Admin\ContentController');
+
+    Route::resource('/users', '\Reveal\Framework\Controllers\Admin\UserController');
+
+    Route::resource('/options', '\Reveal\Framework\Controllers\Admin\OptionsController');
+
+    Route::resource('/logs', '\Reveal\Framework\Controllers\Admin\LogsController');
+
+});
+
+Route::get('/signin', function () {
+    return view(jarvis_views('login'));
+});
+
+Route::get('/signup', function () {
+    return view(jarvis_views('register'));
+});
+
+Route::get('/reset-password', function () {
+    return view(jarvis_views('reset'));
+});
+
+Route::group(['prefix' => config('jarvis.base_url')], function () {
+    Jarvis::install_routes();
+
+    Jarvis::generator_routes();
+
+    Jarvis::routes();
+});
+
+
+Dashauth::routes();
+
+Backstory::routes();
+
+Imgfly::routes();
+
+
+```
+
+* more info coming soon
+
+__Configuration__
 
 ## Usage
 
-WIP...
+WIP..
