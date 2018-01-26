@@ -1,14 +1,17 @@
-# Framework (beta)
+# Framework Hybrid (beta)
 
-Framework is a Laravel toolbox packed with tools and utilities that allows you to rapidly build and deploy laravel applications and websites.
+Framework is a Laravel Hybrid Application (package) that allows developers / designers to spin up laravel applications in minutes. Framework was designed with one thing in mind - reduce the time from idea to production by removing as much of the unnecessary setup boilerplate *(package installs, vendor publishing, config / setup)* as possible.
 
 ## Features (WIP)
 
 * Built in admin/system
 * Content management using **Backstory**
 * User management
+* Roles and permissions (Bouncer)
 * Settings view, manage and backup `.env` settings
 * View and mange system logs
+* Theme management
+* More coming
 
 ### Whats Inside
 
@@ -42,8 +45,19 @@ Framework is currently in beta so please install using the composer repositories
 Run the composer require to install the package
 
 ```bash
-composer require reveal-ui/backstory
+composer require reveal-ui/backstory dev-beta
 ```
+
+__Install Silver/Bouncer__
+
+Install bouncer with Composer
+
+```
+ composer require silber/bouncer
+```
+
+## Setup
+
 __Providers / Facades__
 
 Framework uses laravel 5.5 auto discovery feature to auto register providers / facades. Laravel 5.4 and lower please see each package info for install instructions. Good luck.
@@ -55,12 +69,12 @@ Please add the following to `routes\web.php`
 ``` php
 Framework::routes();
 ```
+
+Check out the Git repo for install / usage instructions [Git Repo](https://github.com/JosephSilber/bouncer)
+
 __Route Info__
 
 ``` php
-
-<?php
-
 
 Route::get('/', function () {
     return view(jarvis_views('index'), ['theme_class' => 'front-page']);
@@ -94,11 +108,13 @@ Route::get('/reset-password', function () {
 });
 
 Route::group(['prefix' => config('jarvis.base_url')], function () {
+
     Jarvis::install_routes();
 
     Jarvis::generator_routes();
 
-    Jarvis::routes();
+	Jarvis::routes();
+
 });
 
 
