@@ -79,7 +79,7 @@ class UserController extends Controller
 
         $user = User::where("id", $id)->with("stories")->first();
 
-        return view('admin.edit-user', compact("user"));
+        return view('framework::admin.edit-user', compact("user"));
     }
 
     /**

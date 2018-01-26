@@ -23,14 +23,14 @@ class ContentController extends StoryController
 		$recent = $this->recent;
 		$categories = StoryCategory::all();
 
-		return view("admin.content", compact('content', 'recent', 'categories'));
+		return view("framework::admin.content", compact('content', 'recent', 'categories'));
 
 	}
 
 	public function create()
 	{
 		$recent = $this->recent;
-		return view("admin.create-content", compact('recent'));
+		return view("framework::admin.create-content", compact('recent'));
 	}
 
 	public function edit($id)
@@ -40,7 +40,7 @@ class ContentController extends StoryController
 
 		$model = Story::with(['author', 'categories'])->where("id", $id)->first();
 
-		return view('admin.edit-content', compact('model', 'recent'));
+		return view('framework::admin.edit-content', compact('model', 'recent'));
 
 	}
 

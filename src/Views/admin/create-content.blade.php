@@ -1,10 +1,11 @@
 @extends('framework::layouts.dashboard')
 @section('content')
+
 <div class="widgets">
-
 	@include(jarvis_views("partials.messages"))
-
 </div>
+
+<div class="section"></div>
 
 <section class="">
 
@@ -26,8 +27,7 @@
 		</div>
 
 		<div class="column is-3 sidebar-right">
-			@include("partials.cards.recent-content")
-
+			@include("framework::partials.cards.recent-content")
 		</div>
 
 	</div>
