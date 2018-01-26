@@ -6,7 +6,6 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Routing\Router;
 use Reveal\Framework\Classes\FrameworkClass;
 use Reveal\Framework\Classes\SystemLogs;
-use Rap2hpoutre\LaravelLogViewer\LaravelLogViewer;
 
 class FrameworkServiceProvider extends ServiceProvider
 {
@@ -20,7 +19,7 @@ class FrameworkServiceProvider extends ServiceProvider
         $router->aliasMiddleware('framework', \Reveal\Framework\Middleware\FrameworkMiddleware::class);
 
         $this->publishes([
-            __DIR__.'/Config/framework.php' => config_path('framework.php'),
+            __DIR__ . '/Config/framework.php' => config_path('framework.php'),
         ], 'framework-config');
 
         //$this->loadRoutesFrom(__DIR__ . '/Routes/web.php');
@@ -48,6 +47,8 @@ class FrameworkServiceProvider extends ServiceProvider
                 \Reveal\Framework\Commands\FrameworkCommand::class,
             ]);
         }
+
+        $this->publishVendors();
     }
 
     /**
@@ -57,23 +58,48 @@ class FrameworkServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
         $this->mergeConfigFrom(
-            __DIR__ . '/Config/framework.php', 'framework'
+            __DIR__ . '/Config/framework.php',
+            'framework'
         );
 
-        $this->app->bind('Framework', function()
-        {
+        $this->app->bind('Framework', function () {
             return new FrameworkClass();
         });
 
-        $this->app->bind('SystemLogs', function()
-        {
-
+        $this->app->bind('SystemLogs', function () {
             return new SystemLogs();
-
         });
-
     }
 
+    protected function publishVendors()
+    {
+        $this->publishes([
+
+            base_path('vendor/brotzka/laravel-dotenv-editor/src/views') => resource_path('views/vendor/dotenv-editor'),
+
+              __DIR__ . '/Views' => resource_path('views/vendor/framework'),
+
+              __DIR__ . '/Translations' => resource_path('lang/vendor/framework'),
+
+              __DIR__ . '/Assets' => public_path('vendor/framework'),
+
+              __DIR__ . '/Config/framework.php' => config_path('framework.php'),
+
+            base_path('vendor/anhskohbo/no-captcha/src/config/captcha.php') => config_path(),
+
+            base_path('vendor/brotzka/laravel-dotenv-editor/src/config/dotenveditor.php') => config_path(),
+
+            base_path('vendor/shawnsandy/img-fly/src/Config/imgfly.php') => config_path(),
+
+            base_path('vendor/pragmarx/firewall/src/config/config.php') => config_path('firewall.php'),
+
+            base_path('vendor/brotzka/laravel-dotenv-editor/src/views') => resource_path('views/vendor/dotenv-editor'),
+
+            base_path('/vendor/shawnsandy/backstory/src/resources/assets/js') => public_path('assets/backstory'),
+
+            base_path('/vendor/shawnsandy/backstory/src/resources/assets/sass') => public_path('assets/backstory'),
+
+        ], 'framework-vendors');
+    }
 }
