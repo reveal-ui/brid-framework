@@ -1,6 +1,6 @@
-# Framework Hybrid (beta)
+# Hybrid Framework(beta)
 
-Framework is a Laravel Hybrid Application (package) that allows developers / designers to spin up laravel applications in minutes. Framework was designed with one thing in mind - reduce the time from idea to production by removing as much of the unnecessary setup boilerplate *(package installs, vendor publishing, config / setup)* as possible.
+Hybrid is a Laravel Application Framework (package) that allows developers / designers to spin up laravel applications in minutes. Hybrid was designed with one thing in mind - reduce the time spent setting up a laravel dev-app by removing as much of the unnecessary setup boilerplate *(package installs, vendor publishing, config / setup)* as possible.
 
 ## Features (WIP)
 
@@ -14,6 +14,8 @@ Framework is a Laravel Hybrid Application (package) that allows developers / des
 * More coming
 
 ### Whats Inside
+
+Hybrid leverages [Composer](//getcomposer.com) and Laravel's [Package Discovery](https://laravel.com/docs/5.5/packages#package-discovery) feature to reduce time spent installing composer packages, writing base code and function and building theme views.
 
 - No CAPTCHA reCAPTCHA [Setup /Instructions](https://github.com/anhskohbo/no-captcha)
 - Laravel .ENV editor This package offers you the possibility to edit your .env dynamically [Setup /Instructions](https://github.com/Brotzka/laravel-dotenv-editor)
@@ -29,7 +31,7 @@ Framework is a Laravel Hybrid Application (package) that allows developers / des
 
 ## Install
 
-Framework is currently in beta so please install using the composer repositories config option, so add the following to your composer.json file.
+Framework is currently in early beta so please install using the composer repositories config option, so add the following to your composer.json file.
 
 ``` json
 
@@ -59,9 +61,7 @@ Install bouncer with Composer
 
 ## Publish vendor files and assets
 
-Publish vendor assets and files
-
-* Publish key vendor files and assets framework-vendors
+Publishing vendor assets and files can be a bit time consuming we use the `framework-vendors` tag below to us from doing it individually.
 
 ```
 php artisan vendor:publish --tag=framework-vendors
@@ -74,6 +74,8 @@ php artisan vendor:publish --tag=backstory-vendor-assets
 ```
 
 __Optional__
+
+Here are some options vendor assets that you can choose to publish
 
 * Dash auth config
 
