@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "354e82345d7a68172abd05b7bcc10dab",
+    "content-hash": "996619d5b7947ac51522d0490f616929",
     "packages": [
         {
             "name": "anhskohbo/no-captcha",
@@ -1017,6 +1017,57 @@
             "time": "2017-03-20T17:10:46+00:00"
         },
         {
+            "name": "hemp/presenter",
+            "version": "v1.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/davidhemphill/presenter.git",
+                "reference": "61bcbf7bfa839414c40ea145f0a8e4d270dd4792"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/davidhemphill/presenter/zipball/61bcbf7bfa839414c40ea145f0a8e4d270dd4792",
+                "reference": "61bcbf7bfa839414c40ea145f0a8e4d270dd4792",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.1|~5.2|~5.3|~5.4|~5.5"
+            },
+            "require-dev": {
+                "graham-campbell/testbench": "^3.2",
+                "graham-campbell/testbench-core": "^1.1",
+                "illuminate/database": "~5.1|~5.2|~5.3|~5.4|~5.5",
+                "mockery/mockery": "^1.0@dev",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "project",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Hemp\\Presenter\\PresenterServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hemp\\Presenter\\": "src"
+                },
+                "files": [
+                    "helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Easy Model Presenters in Laravel",
+            "keywords": [
+                "framework",
+                "laravel"
+            ],
+            "time": "2018-01-23T06:04:30+00:00"
+        },
+        {
             "name": "intervention/image",
             "version": "2.4.1",
             "source": {
@@ -1085,6 +1136,60 @@
                 "watermark"
             ],
             "time": "2017-09-21T16:29:17+00:00"
+        },
+        {
+            "name": "laracasts/flash",
+            "version": "3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laracasts/flash.git",
+                "reference": "10cd420ab63fd0796bf5e1e5b99f87636d2f4333"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laracasts/flash/zipball/10cd420ab63fd0796bf5e1e5b99f87636d2f4333",
+                "reference": "10cd420ab63fd0796bf5e1e5b99f87636d2f4333",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "dev-master",
+                "phpunit/phpunit": "^6.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laracasts\\Flash\\FlashServiceProvider"
+                    ],
+                    "aliases": {
+                        "Flash": "Laracasts\\Flash\\Flash"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Laracasts\\Flash": "src/"
+                },
+                "files": [
+                    "src/Laracasts/Flash/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeffrey Way",
+                    "email": "jeffrey@laracasts.com"
+                }
+            ],
+            "description": "Easy flash notifications",
+            "time": "2017-06-22T19:01:19+00:00"
         },
         {
             "name": "laravel/framework",
