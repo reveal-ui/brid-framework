@@ -1,6 +1,6 @@
-# Hybrid Framework(beta)
+# Brid Framework(beta)
 
-Hybrid is a Laravel Application Framework (package) that allows developers / designers to spin up laravel applications in minutes. Hybrid was designed with one thing in mind - reduce the time spent spinning up a laravel apps by removing as much of the unnecessary setup boilerplate *(package installs, vendor publishing, config / setup)* as possible.
+Brid (hybrid) is a Laravel Application Framework (package) that allows developers / designers to spin up laravel applications in minutes. Brid was designed with one thing in mind - reduce the time spent spinning up a laravel apps by removing as much of the unnecessary setup boilerplate *(package installs, vendor publishing, config / setup)* as possible.
 
 ## Features (WIP)
 
@@ -16,7 +16,7 @@ Hybrid is a Laravel Application Framework (package) that allows developers / des
 
 ### Whats Inside
 
-Hybrid leverages [Composer](//getcomposer.com) and Laravel's [Package Discovery](https://laravel.com/docs/5.5/packages#package-discovery) feature to reduce time spent installing composer packages, writing base code and function and building theme views.
+Brid leverages [Composer](//getcomposer.com) and Laravel's [Package Discovery](https://laravel.com/docs/5.5/packages#package-discovery) feature to reduce time spent installing composer packages, writing base code and function and building theme views.
 
 - No CAPTCHA reCAPTCHA [Setup /Instructions](https://github.com/anhskohbo/no-captcha)
 - Laravel .ENV editor This package offers you the possibility to edit your .env dynamically [Setup /Instructions](https://github.com/Brotzka/laravel-dotenv-editor)
