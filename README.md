@@ -4,6 +4,7 @@ Hybrid is a Laravel Application Framework (package) that allows developers / des
 
 ## Features (WIP)
 
+* Starter theme
 * Built in admin/system
 * Content management using **Backstory**
 * User management interface powered by [Bouncer](https://github.com/JosephSilber/bouncer)
